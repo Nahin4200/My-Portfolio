@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Award } from "lucide-react";
 import { research } from "@/data/content";
@@ -90,7 +89,7 @@ export default function ResearchExploration() {
               {/* View Certificate Link */}
               <div>
                 {hasCertificate && research.certificateUrl ? (
-                  <Link
+                  <a
                     href={research.certificateUrl}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -98,7 +97,7 @@ export default function ResearchExploration() {
                   >
                     <span>View Certificate</span>
                     <ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1" />
-                  </Link>
+                  </a>
                 ) : (
                   <span className="inline-flex items-center space-x-2 text-[10px] font-extrabold tracking-[0.18em] uppercase text-[#1C1C1C]/40 cursor-not-allowed pt-1">
                     <span>View Certificate</span>
@@ -118,7 +117,7 @@ export default function ResearchExploration() {
             className="lg:col-span-4 relative h-[180px] overflow-hidden border border-[#1C1C1C]/10 bg-[#0F1E17] flex items-center px-8"
           >
             <Image
-              src="/images/Model.jfif"
+              src="/images/model-banner.jpg"
               alt="Smarter solutions, a new standard — AI and machine learning visual"
               fill
               className="object-cover"
@@ -132,6 +131,4 @@ export default function ResearchExploration() {
     </section>
   );
 }
-
-
 
